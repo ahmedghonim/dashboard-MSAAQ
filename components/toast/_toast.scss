@@ -1,0 +1,29 @@
+@import '~react-toastify/scss/main';
+
+:root {
+  --toastify-font-family: inherit;
+  --toastify-color-light: #fff;
+  --toastify-color-dark: #121212;
+  --toastify-color-success: theme('colors.success.DEFAULT');
+  --toastify-color-warning: theme('colors.warning.DEFAULT');
+  --toastify-color-error: theme('colors.danger.DEFAULT');
+  --toastify-color-info: theme('colors.info.DEFAULT');
+  --toastify-z-index: 999999999;
+}
+
+.#{$rt-namespace}__toast {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+
+  &-body {
+    padding: 0;
+  }
+
+  [role="alert"] {
+    button {
+      pointer-events: none;
+    }
+  }
+}
+

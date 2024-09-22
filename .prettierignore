@@ -1,0 +1,5 @@
+node_modules
+.next
+.mailing
+package-lock.json
+/types/paddle.d.ts

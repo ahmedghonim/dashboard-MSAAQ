@@ -1,0 +1,167 @@
+@import "~react-day-picker/dist/style.css";
+
+.rdp {
+  --rdp-cell-size: 40px !important;
+  --rdp-accent-color: var(--ms-primary) !important;
+  --rdp-background-color: theme("colors.primary.200") !important;
+  --rdp-accent-color-dark: #3003e1 !important;
+  --rdp-background-color-dark: #180270 !important;
+  --rdp-outline: 2px solid var(--rdp-accent-color) !important;
+  --rdp-outline-selected: 3px solid var(--rdp-accent-color) !important;
+  margin: auto !important;
+
+  &.w-full {
+    .rdp-month {
+      width: 100%;
+    }
+
+    .rdp-table {
+      max-width: 100%;
+      width: 100%;
+
+      .rdp-cell {
+        button {
+          margin-right: auto;
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}
+
+.rdp-month {
+  background: #FCFCFD;
+  border: 1px solid #E6E6E6;
+  border-radius: 8px;
+}
+
+.rdp-cell:nth-child(even), .rdp-head_cell:nth-child(even) {
+  background: #F2F4F4;
+}
+
+.rdp-head_cell, .rdp-cell {
+  padding: 10px !important;
+}
+
+.rdp-day_selected {
+  color: white !important;
+  background-color: var(--ms-primary) !important;
+}
+
+.rdp-day {
+  font-style: normal !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 21px !important;
+}
+
+.rdp-day_today:not(.rdp-day_outside) {
+  background-color: var(--rdp-background-color);
+}
+
+.range-date-picker{
+  .rdp-day_today:not(.rdp-day_outside){
+    background-color: #fff;
+    border:#E6EAE9 2px solid !important; ;
+    &.rdp-day_selected{
+      border-color: transparent !important;
+    }
+  }
+  .rdp-nav_button_next{
+    border-radius: 6px ;
+    background-color: rgba(0, 0, 0,0.04);
+  }
+  .rdp-nav_button_previous{
+    border-radius: 6px ;
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+  .rdp-caption{
+    margin-bottom: 16px;
+  }
+  .rdp-months{
+    gap: 32px;
+  }
+  .rdp-month{
+    background-color: transparent !important;
+    border: unset !important;
+  }
+  .rdp-nav_button{
+    transform: rotate(180deg);
+  }
+  .rdp-head_cell{
+    padding: 0 !important;
+    padding-bottom: 16px !important;
+  }
+  .rdp-cell:nth-child(even), .rdp-head_cell:nth-child(even) {
+    background: unset !important;
+  }
+  .rdp-caption_end{
+    margin: unset !important;
+  }
+  .rdp-caption_start{
+    margin: unset !important;
+    
+  }
+  .rdp-row{
+    margin-bottom: 8px;
+  }
+  .rdp-cell{
+    width: 32px;
+    height: 32px;
+    padding: 0 !important;
+    padding-bottom: 8px !important;
+
+  }
+  .rdp-day_selected {
+
+    color: black !important;
+    background-color: #edf2f1 !important;
+    &.rdp-day_range_end{
+      color: white !important;
+      background-color: var(--ms-primary) !important;
+    }
+    &.rdp-day_range_start{
+      color: white !important;
+      background-color: var(--ms-primary) !important;
+    }
+  }  
+}
+.rdp-day_range_start:not(.rdp-day_range_end) {
+  border-top-right-radius: 100% !important;
+  border-bottom-right-radius: 100% !important;
+
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.rdp-day_range_end:not(.rdp-day_range_start) {
+  border-top-left-radius: 100% !important;
+  border-bottom-left-radius: 100% !important;
+
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+html[dir='rtl']  .rdp-multiple_months .rdp-caption_start .rdp-nav{
+  left: 0 !important;
+  right: unset !important;
+  transform: rotate(180deg) translateY(50%);
+}
+html[dir='rtl']  .rdp-multiple_months .rdp-caption_end .rdp-nav{
+  
+  right: 0 !important;
+  left: unset !important;
+  transform: rotate(180deg) translateY(50%);
+}
+
+html[dir='ltr']  .rdp-multiple_months .rdp-caption_start .rdp-nav{
+  right: 0 !important;
+  left: unset !important;
+  transform: rotate(180deg) translateY(50%);
+}
+html[dir='ltr']  .rdp-multiple_months .rdp-caption_end .rdp-nav{
+  
+  left: 0 !important;
+  right: unset !important;
+  transform: rotate(180deg) translateY(50%);
+}
